@@ -1,0 +1,266 @@
+:root {
+    --morado-ipuic: #65428a;
+    --amarillo-ipuic: #f7ef8f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--morado-ipuic);    
+}
+
+header {
+    width: 100%;
+    height: 310px;
+    background-image: url("./imagenes/fondo-movil.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+header h1 {
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+
+}
+
+.title-container {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+header .menu-logo {
+    width: 80px;
+    margin-top: 30px;
+}
+
+main .main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 35px;
+}
+
+main
+{
+    height: 100vh;
+}
+.logo-boton {
+    position: absolute;
+    width: 70px;
+    display: block;
+    top: 270px;
+    left: calc(50% - 29px);
+}
+
+.main-container p {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.boton-generico {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    align-self: center;
+    border-color: var(--amarillo-ipuic);
+    background: var(--morado-ipuic);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.navegacion {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegacion ul {
+    display: flex;
+    width: 320px;
+}
+
+.navegacion ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navegacion ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navegacion ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--morado-ipuic);
+}
+
+.navegacion ul li.active a .icon {
+    transform: translateY(-32px);
+}
+
+.navegacion ul li a .text {
+    position: absolute;
+    color: var(--morado-ipuic);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navegacion ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+
+}
+
+.indicador {
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: var(--amarillo-ipuic);
+    border-radius: 50%;
+    border: 6px solid var(--morado-ipuic);
+    transition: 0.5s;
+}
+
+.indicador::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 var(--morado-ipuic);
+}
+
+.indicador::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 var(--morado-ipuic);
+}
+
+.navegacion ul li:nth-child(1).active ~ .indicador {
+    transform: translateX(calc(63px * 0));
+}
+
+.navegacion ul li:nth-child(2).active ~ .indicador {
+    transform: translateX(calc(63px * 1));
+}
+
+.navegacion ul li:nth-child(3).active ~ .indicador {
+    transform: translateX(calc(63px * 2));
+}
+
+.navegacion ul li:nth-child(4).active ~ .indicador {
+    transform: translateX(calc(63px * 3));
+}
+.navegacion ul li:nth-child(5).active ~ .indicador {
+    transform: translateX(calc(63px * 4));
+}
+
+footer .linea
+{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 70px;
+    z-index: -1;
+    background-color: var(--morado-ipuic)
+
+}
+.redes{
+    display: flex;
+    justify-content: center;
+
+}
+
+.red-container
+{
+    display: flex;
+    width: 250px;
+    height: 70px;
+    justify-content: space-between;
+    background: white;
+    border-radius: 40px;
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.imgface
+{
+    border: 4px solid white;
+    border-radius: 40px;
+}
+
+.text-red
+{
+    margin-left: 30px;
+}
+.siguenos
+{
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.red-social
+{
+    font-size: 25px;
+    font-weight: bold;
+}
